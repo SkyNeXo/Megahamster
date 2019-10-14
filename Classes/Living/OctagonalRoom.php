@@ -1,6 +1,6 @@
 <?php
 
-
+namespace FIS\Megahamster\Living;
 
 class OctagonalRoom extends Room
 {

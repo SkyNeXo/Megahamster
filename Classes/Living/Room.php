@@ -1,5 +1,6 @@
 <?php
 
+namespace FIS\Megahamster\Living;
 
 abstract class Room
 {

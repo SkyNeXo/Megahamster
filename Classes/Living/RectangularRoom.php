@@ -2,6 +2,8 @@
 
 // require "Room.php";
 
+namespace FIS\Megahamster\Living;
+
 class RectangularRoom extends Room
 {
 

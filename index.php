@@ -1,10 +1,14 @@
 <?php
-require("classes/Room.php");
-require("classes/RectangularRoom.php");
-require("classes/OctagonalRoom.php");
-$rooms[] = new RectangularRoom("The Flat", 149.00, 80, 50, []);
-$rooms[] = new RectangularRoom("The Room", 49.00, 120, 80, ["Food jars"]);
-$rooms[] = new OctagonalRoom("The Pit", 69.00, 20, ["Hamster training gloves", "Hamster punching sack"]);
+require("Classes/Living/Room.php");
+require("Classes/Living/RectangularRoom.php");
+require("Classes/Living/OctagonalRoom.php");
+
+use FIS\Megahamster\Living as Living;
+
+$rooms[] = new Living\RectangularRoom("The Flat", 149.00, 80, 50, []);
+$rooms[] = new Living\RectangularRoom("The Room", 49.00, 120, 80, ["Food jars"]);
+$rooms[] = new Living\OctagonalRoom("The Pit", 69.00, 20, ["Hamster training gloves", "Hamster punching sack"]);
+
 ?>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
