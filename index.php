@@ -1,7 +1,10 @@
 <?php
-require("Classes/Living/Room.php");
-require("Classes/Living/RectangularRoom.php");
-require("Classes/Living/OctagonalRoom.php");
+//require("Classes/Living/Room.php");
+//require("Classes/Living/RectangularRoom.php");
+//require("Classes/Living/OctagonalRoom.php");
+//Nicht mehr nötigt wegen Autoloader
+
+require("vendor/autoload.php");
 
 use FIS\Megahamster\Living as Living;
 
