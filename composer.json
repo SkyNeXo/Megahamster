@@ -1,0 +1,16 @@
+{
+    "name": "fis/megahamster",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jakob",
+            "email": "jakob.fischer0408@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "FIS\\Megahamster\\": "Classes/"
+        }
+    },
+    "require": {}
+}
