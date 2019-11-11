@@ -12,7 +12,12 @@ $rooms[] = new Living\RectangularRoom("The Flat", 149.00, 80, 50, []);
 $rooms[] = new Living\RectangularRoom("The Room", 49.00, 120, 80, ["Food jars"]);
 $rooms[] = new Living\OctagonalRoom("The Pit", 69.00, 20, ["Hamster training gloves", "Hamster punching sack"]);
 
-?>
+if (isset($_GET['format']) && $_GET['format']==="json") {
+    header("content-type:application/json");
+    echo json_encode($rooms);
+} else {
+
+    echo <<<HTML
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -50,11 +55,13 @@ $rooms[] = new Living\OctagonalRoom("The Pit", 69.00, 20, ["Hamster training glo
                 <th>Side</th>
                 <th>Special Equipment</th>
             </tr>
-            <?php
-            foreach ($rooms as $room) {
-                echo $room->toHtml();
-            }
-            ?>
+HTML;
+    foreach ($rooms as $room) {
+        echo $room->toHtml();
+    }
+    echo <<<HTML
         </table>
     </div>
 </div>
+HTML;
+}

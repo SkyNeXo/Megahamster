@@ -4,7 +4,7 @@
 
 namespace FIS\Megahamster\Living;
 
-class RectangularRoom extends Room
+class RectangularRoom extends Room implements \JsonSerializable
 {
 
     private $length = 0;
@@ -64,6 +64,15 @@ class RectangularRoom extends Room
     {
         return $this->getName() . ', ' . $this->getPrice() . '€, ' . $this->calcArea() . 'cm², ' . $this->getLength() . 'cm, ' . $this->getWidth() . 'cm ';
     }
+
+    public function jsonSerialize()
+    {
+        $rv = parent::jsonSerialize();
+        $rv['length'] = $this->getLength();
+        $rv['width'] = $this->getWidth();
+        return $rv;
+    }
+
 
 }
 

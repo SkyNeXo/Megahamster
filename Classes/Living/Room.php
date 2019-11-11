@@ -2,7 +2,7 @@
 
 namespace FIS\Megahamster\Living;
 
-abstract class Room
+abstract class Room implements \JsonSerializable
 {
 
     private $price = 0;
@@ -55,9 +55,16 @@ abstract class Room
      */
     public function getName(): string
     {
-        return $this->name . " (" . ((get_class($this) == "OctagonalRoom") ? "Octagonal" : "Rectangular") . ")";
+        return $this->name;
     }
 
+    public function jsonSerialize()
+    {
+        $rv['name'] = $this->getName();
+        $rv['price'] = $this->getPrice();
+        $rv['special_equipment'] = $this->getSpecialEquipment();
+        return $rv;
+    }
 
     public abstract function calcArea();
 

@@ -12,5 +12,7 @@
             "FIS\\Megahamster\\": "Classes/"
         }
     },
-    "require": {}
+    "require": {
+        "ext-json": "*"
+    }
 }

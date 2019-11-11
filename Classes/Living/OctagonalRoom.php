@@ -2,7 +2,7 @@
 
 namespace FIS\Megahamster\Living;
 
-class OctagonalRoom extends Room
+class OctagonalRoom extends Room implements \JsonSerializable
 {
     private $side = 0;
 
@@ -47,4 +47,13 @@ class OctagonalRoom extends Room
     {
         return $this->getName() . ' ' . $this->getPrice() . '$ ' . $this->calcArea() . 'cm²';
     }
+
+    public function jsonSerialize()
+    {
+        $rv = parent::jsonSerialize();
+        $rv['side'] = $this->getSide();
+        return $rv;
+    }
+
+
 }
