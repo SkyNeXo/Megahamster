@@ -70,6 +70,7 @@ class RectangularRoom extends Room implements \JsonSerializable
         $rv = parent::jsonSerialize();
         $rv['length'] = $this->getLength();
         $rv['width'] = $this->getWidth();
+        $rv['area'] = $this->calcArea();
         return $rv;
     }
 
