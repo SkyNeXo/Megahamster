@@ -19,7 +19,7 @@
             position: absolute;
             top: 20%;
             box-shadow: 0 0 20px #888888;
-            border-top: solid 40px #3399ff;
+            border-top: solid 40px #0fff76;
             border-radius: 4px;
             padding: 40px;
         }
@@ -55,11 +55,11 @@
                     content +=
                         "<tr>" +
                         "<td>" + e.name + "</td>" +
-                        "<td>" + e.price + "</td>" +
-                        "<td>" + e.area + "</td>" +
-                        "<td>" + ((e.length) ? e.length : "/") + "</td>" +
-                        "<td>" + ((e.width) ? e.width : "/") + "</td>" +
-                        "<td>" + ((e.side) ? e.side : "/") + "</td>" +
+                        "<td>" + e.price + " €</td>" +
+                        "<td>" + e.area + " cm²</td>" +
+                        "<td>" + ((e.length) ? e.length + " cm" : "/") + "</td>" +
+                        "<td>" + ((e.width) ? e.width + " cm" : "/") + "</td>" +
+                        "<td>" + ((e.side) ? e.side + " cm" : "/") + "</td>" +
                         "<td>" + ((e.special_equipment != "") ? e.special_equipment : "/") + "</td>"
                 });
                 content += "</table>";
