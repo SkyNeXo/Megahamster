@@ -9,12 +9,14 @@ class RectangularRoom extends Room implements \JsonSerializable
 
     private $length = 0;
     private $width = 0;
+    private $area = 0;
 
     function __construct(string $name, float $price, float $length, float $width, array $special_equipment)
     {
         parent::__construct($price, $name, $special_equipment);
         $this->length = $length;
         $this->width = $width;
+        $this->area = $this->calcArea();
     }
 
     /**
@@ -58,6 +60,16 @@ class RectangularRoom extends Room implements \JsonSerializable
         return $this->width * $this->length;
     }
 
+    /**
+     * @return float|int
+     */
+    public function getArea()
+    {
+        return $this->area;
+    }
+
+
+
 
     //Testzwecke
     function __toString()
@@ -73,8 +85,6 @@ class RectangularRoom extends Room implements \JsonSerializable
         $rv['area'] = $this->calcArea();
         return $rv;
     }
-
-
 }
 
 //Testzwecke
