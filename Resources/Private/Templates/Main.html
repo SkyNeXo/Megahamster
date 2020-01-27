@@ -26,7 +26,7 @@
             padding: 40px;
         }
     </style>
-    <title>Megahamster</title>
+    <title>Megahamster Fluid</title>
 </head>
 <body>
 
@@ -51,9 +51,12 @@
                     <td>{roomentry.length}</td>
                     <td>{roomentry.width}</td>
                     <td>{roomentry.side}</td>
-                    <td>{roomentry.special_equipment}</td>
+                    <td>
+                        <f:for each="{roomentry.special_equipment}" as="specialEquipment">
+                            {specialEquipment}
+                        </f:for>
+                    </td>
                 </tr>
-
             </f:for>
         </table>
     </div>

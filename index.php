@@ -42,6 +42,8 @@ if (isset($_GET['format']) && $_GET['format']==="json") {
             padding: 40px;
         }
     </style>
+    
+    <title>Megahamster PHP</title>
 </head>
 <div class="d-flex justify-content-center">
     <div class="container">
