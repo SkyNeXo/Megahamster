@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteRule ^javascript$ index.html [NC]
+RewriteRule ^php$ index.php [NC]
+RewriteRule ^json$ index.php?format=json [NC]
+RewriteRule ^typo3$ index2.php [NC]
+RewriteRule ^$ index.php [NC]
